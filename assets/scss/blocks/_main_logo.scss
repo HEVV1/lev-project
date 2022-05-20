@@ -1,0 +1,37 @@
+.block-main-logo{
+    .wrapper-main-logo{
+        display: flex;
+        align-items: center;
+        .image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &.wrapper-logo-circle{
+                flex: 1 0 auto;
+                width: 81px;
+                max-width: 81px;
+            }
+            &.wrapper-logo-text{
+                flex: 1 0 auto;
+                width: 93px;
+                max-width: 93px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .block-main-logo{
+        margin-bottom: 50px;
+        &.footer-logo{
+            .wrapper-main-logo{
+                .image{
+                    &.wrapper-logo-circle{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

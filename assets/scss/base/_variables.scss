@@ -1,0 +1,24 @@
+/* Colors -----------------------------------------------------------------*/
+$color_1:  #FFFFFF; // White
+$color_2:  #242424; // Black
+$color_3:  #6C8F77; // Green
+$color_4:  #F8F8F8; // Light Grey for footer background
+$color_5:  #FFC700; // Orange
+$color_6:  #B4B4B4; // Grey
+
+
+/* Fonts ------------------------------------------------------------------*/
+$font_awesome_5_pro: 'Font Awesome 5 Pro';
+$font_montserrat_stack: 'Montserrat', sans-serif;
+$font_playfair_display_stack: 'Playfair Display', serif;
+$font_yeseva_one_stack: 'Yeseva One', cursive;
+$default_font_stack: $font_montserrat_stack;
+$default_font_size: 15px;
+$default_font_weight: 400;
+$default_line_height: 20px;
+$default_font_color: $color_2;
+
+/* Other ------------------------------------------------------------------*/
+$regular_content_width: 1110px + 40px; // content + outside gutter (left and right together)
+$image_directory: '../../images/';
+$default_transition_time: 300ms;

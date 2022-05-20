@@ -1,0 +1,110 @@
+.block-background-flower{
+    position: absolute;
+    z-index: -1;
+    &.flower-1{
+        top: 1150px;
+        left: 60%;
+        img{
+            width: 880px;
+            min-width: 880px;
+        }
+    }
+    &.flower-2{
+        top: 2800px;
+        right: 66%;
+        img{
+            width: 610px;
+            min-width: 610px;
+        }
+    }
+    &.flower-3{
+        top: 3600px;
+        left: 70%;
+        img{
+            width: 530px;
+            min-width: 530px;
+        }
+    }
+    &.flower-4{
+        top: 4700px;
+        left: 70%;
+        img{
+            width: 610px;
+            min-width: 610px;
+        }
+    }
+    &.flower-5{
+        top: 5950px;
+        right: 65%;        
+        img{
+            width: 710px;
+            min-width: 710px;
+        }
+    }
+    &.flower-6{
+        display: none;
+        top: 0;
+        right: 0;
+        img{
+            width: 102px;
+            min-width: 102px;
+        }
+    }
+    &.flower-7{   
+        display: none;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        img{
+            width: 164px;
+            min-width: 164px;
+        }
+    }
+    &.flower-8{
+        left: 0;
+        bottom: 0;
+        img{
+            width: 164px;
+            min-width: 164px;
+        }
+    }
+    &.flower-9{
+        top: 19%;
+        right: 0;
+        img{
+            width: 200px;
+            min-width: 200px;
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .block-background-flower{
+        &.flower-1{
+            top: 470px;
+            left: 79%;
+            img{
+                width: 167px;
+                min-width: 167px;
+            }
+        }
+        &.flower-2{
+            display: none;
+        }
+        &.flower-3{
+            display: none;
+        }
+        &.flower-4{
+            display: none;
+        }
+        &.flower-5{
+            display: none;
+        }
+        &.flower-6{
+            display: block;
+        }
+        &.flower-7{
+            display: block;
+        }        
+    }
+}

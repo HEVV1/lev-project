@@ -1,0 +1,142 @@
+.block-promo {
+	width: 100%;
+	height: calc(100vh - 106px);
+	max-height: 770px;
+	margin-bottom: 115px;
+	position: relative;
+	.wrapper-promo-content{
+		height: 100%;
+		.slider-promo-content{
+			height: 100%;
+			position: relative;
+			.slider-content{
+				position: relative;
+				.items{
+					display: inline-block;
+					height: 100%;
+					width: 100%;
+					position: relative;
+					.wrapper-background{
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						flex: 1 0 auto;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+						.wrapper-slider-inner-content{
+							max-width: 1373px;
+							padding-left: 150px;
+							padding-right: 150px;
+							width: 100%;
+							height: 100%;
+							display: flex;
+							flex-flow: column;
+							justify-content: center;
+							margin: 0 auto;
+							.wrapper-text{
+								text-align: center;
+								&.text-promo-1{
+									margin-bottom: 63px;
+								}
+								&.text-promo-2{
+									margin-bottom: 60px;
+								}
+							}
+							.wrapper-button{
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+		.wrapper-promo-links{
+			position: absolute;
+			right: 66px;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			top: 50%;
+			.wrapper-text{
+				&.text-promo-links-mobile{
+					display: none;
+				}
+				&.text-promo-links-desktop{
+					display: block;
+				}
+			}
+			a{
+				margin-bottom: 14px;
+			}
+			i{
+				color: $color_1;
+			}
+			img{
+				width: 14px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md')){
+    .block-promo{
+		max-height: 483px;
+		margin-bottom: 31px;
+		.wrapper-promo-content{
+			.slider-promo-content{
+				.slider-content{
+					.items{
+						.wrapper-background{
+							.wrapper-slider-inner-content{
+								padding-left: 27px;
+								padding-right: 27px;
+								.wrapper-text{
+									&.text-promo-1{
+										margin-bottom: 12px;
+									}
+									&.text-promo-2{
+										margin-top: 8px;
+										margin-bottom: 40px;
+									}
+								}
+								.wrapper-line{
+									width: 100%;
+									display: flex;
+									justify-content: center;
+									.line{
+										background-color: $color_1;
+										height: 1px;
+										width: 50%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.wrapper-promo-links{
+				flex-flow: row;
+				top: unset;
+				bottom: 30px;
+				right: unset;
+				left: 27px;
+				.wrapper-text{
+					&.text-promo-links-mobile{
+						display: block;
+					}
+					&.text-promo-links-desktop{
+						display: none;
+					}
+				}
+				a{
+					margin: auto 13px;
+				}
+			}
+		}
+	}
+}

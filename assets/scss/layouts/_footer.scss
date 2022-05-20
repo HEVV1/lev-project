@@ -1,0 +1,79 @@
+.layout-footer{
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    background-color: $color_4;
+    .footer-middle{
+        .wrapper-footer-text{
+            margin-bottom: 60px; 
+            .wrapper-text{
+                &.header-text{
+                    margin-bottom: 10px;
+                }
+                &.header-text-with-top-space{
+                    margin-top: 17px;
+                }
+                nav{
+                    a{                        
+                        display: block;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                span{
+                    display: block;
+                }
+                .wrapper-text-and-icon{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 13px;
+                        width: 13px;
+                    }
+                    &.icon-home{
+                        align-items: unset;
+                        img{
+                            margin-top: 7px;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        .policy{
+            display: flex;
+            justify-content: flex-end;
+            .text-footer-bottom{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .layout-footer{
+        .footer-middle{
+            padding-left: 20px;
+            .wrapper-footer-text{
+                margin-bottom: 25px;
+            }
+        }
+        hr{
+            width: 85%;
+        }
+        .footer-bottom{
+            .wrapper-text{
+                text-align: center;
+            }
+            .policy{
+                justify-content: space-around;
+            }
+        }
+    }
+}

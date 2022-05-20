@@ -1,0 +1,62 @@
+// Abstracts - Variables, functions, mixins, and placeholders
+@import
+	'base/variables',
+	'base/mixins',
+	'base/fonts',
+	'../fonts/fontawesome-pro-5.12.0-web/css/all.min.css';
+
+// Vendors
+@import
+	'vendors/normalize',
+	'vendors/bootstrap/bootstrap-variables-override',
+	'../../assets/node_modules/bootstrap/scss/bootstrap-grid';
+
+// Base
+@import
+	'base/helpers',
+	'base/base',
+	'base/typography';
+// Components
+@import
+	'components/button',
+	'components/button_promo',
+	'components/button_categories',
+	'components/button_contact',
+	'components/button_back',
+	'components/header_language_select',
+	'components/header_language_select_mobile',
+	'components/burger';
+// Blocks
+@import 
+	'blocks/main_logo',
+	'blocks/header_links',
+	'blocks/block_menu_links',
+	'blocks/search',
+	'blocks/promo',
+	'blocks/slider',
+	'blocks/main_content',
+	'blocks/content_categories',
+	'blocks/certificate',
+	'blocks/header_text',
+	'blocks/map_header',
+	'blocks/map',
+	'blocks/map_popup',
+	'blocks/contact_us',
+	'blocks/back',
+	'blocks/background_flower',
+	'blocks/logos_mobile',
+	'blocks/menu_search',
+	'blocks/links-extension';
+// Layouts
+@import
+	'layouts/header',
+	'layouts/form',
+	'layouts/footer',
+	'layouts/menu';
+
+// Browser-specific overrides
+@import
+	'overrides/ff_only',
+	'overrides/safari_only',
+	'overrides/ie10+',
+	'overrides/print';

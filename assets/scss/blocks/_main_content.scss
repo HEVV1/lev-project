@@ -1,0 +1,13 @@
+.block-main-content{
+    margin-bottom: 210px;
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md')){
+    .block-main-content{
+        margin-bottom: 20px;
+        .container{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }  
+}

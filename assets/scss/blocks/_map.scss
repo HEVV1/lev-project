@@ -1,0 +1,146 @@
+.block-map {
+	position: relative;
+    margin-bottom: 68px;
+	.wrapper-map {
+        width: 100%;
+		height: 703px;
+		.wrapper-marker {
+			position: relative;
+			right: 100%;
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                cursor: url(../../images/icon_cursor.svg), auto;
+                .wrapper-image{
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: ease-in-out $default_transition_time;
+                }
+                .show-image{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &:before{
+                visibility: hidden;
+                opacity: 0;
+                display: inline-block;
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%) translateY(0%);
+                border-radius: 50%;
+                transition: ease-in-out $default_transition_time;
+            }
+            &.wrapper-marker-active{
+                &:before{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &.markets{
+                width: 29px;
+                height: 29px;
+                .circle {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background-color: $color_3;
+                }
+                &:before{
+                    background-color: $color_3;
+                    width: 15px;
+                    height: 6px;
+                }
+            }
+            &.partners{
+                width: 56px;
+                height: 56px;
+                .circle {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background-color: $color_5;
+                }
+                &:before{
+                    background-color: $color_5;
+                    width: 22px;
+                    height: 9px;
+                }
+            }
+            &.idle{
+                display: none;
+            }
+		}
+        .active{
+            &:before{
+                visibility: visible !important;
+                opacity: 1;
+            }
+        }
+	}
+    .wrapper-circle-popup{
+        &.markets{
+            border-right: 2px solid $color_3;
+            border-bottom: 2px solid $color_3;
+            top: 23.5%;
+            left: 66%;
+        }
+        &.partners{
+            border-right: 2px solid $color_5;
+            border-bottom: 2px solid $color_5;
+            top: 25.5%;
+            left: 66%;
+        }
+        &.show-all{
+            visibility: visible;
+            opacity: 1;
+        }
+        transition: ease-in-out$default_transition_time;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        max-width: 500px;
+        width: 30%;
+        height: 400px;       
+        transform: translateY(-50%) translateX(-50%);
+        background: none;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "lg")) {
+    .block-map{
+        .wrapper-circle-popup{
+            max-width: 180px;
+            &.markets{
+                left: 62%;
+            }
+            &.partners{
+                left: 62%;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .block-map{
+        margin-bottom: 24px;
+        .wrapper-map{
+           height: 310px; 
+        }
+        .wrapper-circle-popup{
+            max-width: 50px;
+            height: 205px;
+            &.markets{
+                left: 62%;
+            }
+            &.partners{
+                left: 62%;
+            }            
+        }
+    }
+}

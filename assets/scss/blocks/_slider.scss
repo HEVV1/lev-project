@@ -1,0 +1,60 @@
+.block-slider{
+	overflow: hidden;
+	//Default
+	.slider-holder{
+		height: 100%;
+		.slick-list {
+			height: 100%;
+			.slick-track {
+				height: 100%; /* this disables adaptive height */
+				.slick-slide {
+					& > div {
+						height: 100%;
+						.slider-item {
+							height: 100%;
+							outline: 0;
+							position: relative;
+							cursor: default;
+						}
+					}
+				}
+			}
+		}
+
+		.slick-dots{			
+			position: absolute;
+			top: 50%;
+			left: 60px;
+			transform: translateY(-50%);
+			li{				
+				margin-bottom: 50px;
+				margin-top: 50px;
+				button{					
+					display: block;
+					width: 8px;
+					height: 8px;
+					overflow: hidden;
+					text-indent: -9999px;
+					border: 1px solid $color_1;
+					border-radius: 100%;
+					cursor: pointer;
+					position: relative;
+					background-color: transparent;					
+				}
+				&.slick-active{
+					button{						
+						background-color: $color_1;
+					}
+				}
+			}			
+		}
+	}
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md')){
+	.block-slider{		
+		.slick-dots{
+			display: none !important;
+		}		
+	}
+}

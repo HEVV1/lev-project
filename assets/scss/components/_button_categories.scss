@@ -1,0 +1,74 @@
+.button-categories{
+    border: 1px solid $color_3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    min-height: 48px;  
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $color_3;
+    position: relative;
+    text-indent: -300px;
+    transition: ease-in-out 300ms;
+    overflow: hidden;   
+    img{
+        transition: ease-in-out 300ms;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);        
+        &.arrow-white{
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &:hover{     
+        background-color: $color_3;   
+        width: 200px;
+        text-indent: 0;
+        color: $color_1;
+        img{         
+            fill: $color_1;
+            left: 90%;
+            &.arrow-white{
+                visibility: visible;
+                opacity: 1;
+            }
+            &.arrow-green{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .button-categories{
+        &:hover{
+            background-color: transparent;            
+            width: 52px;            
+            color: $color_3;            
+            text-indent: -300px;       
+            img{
+                transition: ease-in-out 300ms;
+                height: 15px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);        
+                &.arrow-white{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &.arrow-green{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

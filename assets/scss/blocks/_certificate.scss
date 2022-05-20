@@ -1,0 +1,43 @@
+.block-certificate{
+    width: 100%;
+    min-height: 540px;
+    margin-bottom: 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    .wrapper-certificate{
+        .block-header-text{
+            float: right;
+            margin-right: 187px;  
+            margin-top: 118px;
+        }
+        .wrapper-certificate-images{
+            margin-top: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .image{
+                height: 100%;
+                width: 100%;
+                margin-left: 10px;           
+                margin-right: 10px;           
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md')){
+    .block-certificate{
+        background-position: left;
+        min-height: 100%;
+        margin-bottom: 25px;
+        .wrapper-certificate{
+            .wrapper-certificate-images{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

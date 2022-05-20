@@ -1,0 +1,115 @@
+.block-map-popup{
+    pointer-events:visibleFill !important;
+    position: absolute;
+    background-color: $color_1;
+    min-width: 380px;    
+    width: 90%;
+    padding-top: 91px;
+    padding-bottom: 91px;    
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color_3;
+    transition: ease-in-out $default_transition_time;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 97.3%;
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;        
+    }
+    &.markets{
+        &:before{
+            background-color: $color_3;
+        }        
+    }
+    &.partners{
+        &:before{
+            background-color: $color_5;
+        }        
+    }
+    .wrapper-map-popup{
+        display: flex;
+        flex-flow: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        .wrapper-text{
+            max-width: 275px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .wrapper-map-popup-text{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .wrapper-text{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            &.map-popup-location{
+                
+                .wrapper-text{
+                    margin-left: 10px;
+                }
+                .wrapper-image{ 
+                    display: none;
+                    width: 15px;                   
+                    img{                        
+                        margin-top: 4px;
+                        width: 15px;
+                        height: 13px;
+                    }
+                }
+            }
+            &.map-popup-phone{
+                .wrapper-text{
+                    margin-left: 10px;
+                }
+                .wrapper-image{ 
+                    width: 10px;                   
+                    img{
+                        margin-left: 1px;
+                        margin-top: 4px;
+                        width: 10px;
+                        height: 13px;
+                    }
+                }
+            }
+            &.map-popup-email{
+                .wrapper-text{
+                    margin-left: 10px;
+                }
+                .wrapper-image{  
+                    width: 13px;                  
+                    img{
+                        width: 13px;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+    .block-map-popup{
+        min-width: 187px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .wrapper-map-popup{
+            .wrapper-map-popup-text{
+                &.map-popup-location{
+                    .wrapper-image{
+                        display: inherit;
+                    }                    
+                }
+            }
+        }
+    }
+}

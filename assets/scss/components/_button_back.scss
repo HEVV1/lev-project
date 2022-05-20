@@ -1,0 +1,10 @@
+.button-back{
+    display: inline-block;
+    @include bgimgin('ic_arrow_up.svg');    
+    width: 48px;
+    height: 48px;
+    background-color: $color_3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+}

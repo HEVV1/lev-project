@@ -1,0 +1,24 @@
+.button-promo{    
+    border: 1px solid $color_1;  
+    padding-left: 53px;
+    padding-right: 53px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    &::after{   
+        display: inline-block;     
+        content: '';
+        @include bgimgin('ic_arrow_right.svg');
+        width: 4px;
+        height: 9px;          
+        transform: translateX(14px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md')){    
+    .button-promo{
+        padding-left: 28px;
+        padding-right: 28px;
+    }    
+}
